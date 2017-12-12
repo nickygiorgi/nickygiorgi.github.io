@@ -1,1 +1,0 @@
-var quadro = document.getElementById("quadro");

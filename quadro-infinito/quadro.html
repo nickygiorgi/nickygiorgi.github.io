@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<script type="text/javascript" src="quadro.js"></script>
+	<script type="text/javascript" src="utils.js"></script>
+	<script type="text/javascript" src="point.js"></script>
+	<script type="text/javascript" src="picture.js"></script>
 </head>
 <body>
 	<h1>Quadro infinito</h1>
-	<canvas id="quadro">
+	<canvas id="frame">
 	</canvas>
+	<script type="text/javascript">
+		(function () {
+		
+			var frame = document.getElementById('frame');
+		
+			console.log('Random number between 1 and 10: ' + randomNumber(1, 10));
+			
+			var point = new Point(1, 2);
+			
+			console.log('A point: ' + point.x + ', ' + point.y);
+			
+			var picture = new Picture(100, 100);
+			
+			console.log('A picture ' + picture.width + ' wide and ' + picture.height + ' high');
+			
+			var randomPointInPicture = picture.randomPoint();
+			
+			console.log('A random point in the picture: ' + randomPointInPicture.x + ', ' + randomPointInPicture.y);
+		
+		})();
+	</script>
 </body>
