@@ -13,6 +13,7 @@ class Picture {
 	var randomStart = this.randomPoint();
 	var randomEnd = this.randomPoint();
 	var context = this.canvas.getContext("2d");
+	context.strokeStyle = randomHexadecimalColour();
 	context.beginPath();
 	context.moveTo(randomStart.x, randomStart.y);
 	context.lineTo(randomEnd.x, randomEnd.y);
