@@ -10,7 +10,8 @@
 <body>
 	<h1>Quadro infinito</h1>
 	<div id="control-panel">
-		<button class="button-default">STOP</button>
+		<button id="stop-button" class="button-default">STOP</button>
+		<button id="start-button" class="button-default" style="display: none;">START</button>
 	</div>
 	<canvas id="frame" width="640" height="480">
 	</canvas>
@@ -18,7 +19,19 @@
 	<script type="text/javascript">
 		(function () {		
 			var frame = document.getElementById('frame');
-			var picture = new Picture(frame);		
+			var picture = new Picture(frame);
+		    var stopBtn = document.getElementById('stop-button');
+			var startBtn = document.getElementById('start-button');
+			stopBtn.onclick = () => {
+				picture.isPlaying = false;
+				stopBtn.style.display = 'none';
+				startBtn.style.display = 'block';
+			};
+			startBtn.onclick = () => {
+				picture.isPlaying = true;
+				startBtn.style.display = 'none';
+				stopBtn.style.display = 'block';
+			};
 		})();
 	</script>
 </body>

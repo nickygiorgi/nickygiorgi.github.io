@@ -1,8 +1,16 @@
 class Picture {
   constructor(canvas) {
+	this.isPlaying = true;
     this.canvas = canvas;
 	var picture = this;
-	setInterval(function(){ picture.drawRandomLine(); }, 1000);
+	setInterval(
+		function(){
+			if (picture.isPlaying) {
+				picture.drawRandomLine();
+			}
+		},
+		1000
+	);
   }
   
   randomPoint() {
