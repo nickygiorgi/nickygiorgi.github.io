@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="quadro.css">
 	<script type="text/javascript" src="utils.js"></script>
 	<script type="text/javascript" src="point.js"></script>
 	<script type="text/javascript" src="picture.js"></script>
-	<style>
-		#frame {
-			background-color: lightgrey;
-		}
-	</style>	
 </head>
 <body>
 	<h1>Quadro infinito</h1>
+	<div id="control-panel">
+		<button class="button-default">STOP</button>
+	</div>
 	<canvas id="frame" width="640" height="480">
 	</canvas>
+	<span id="resize-canvas" class="glyphicon glyphicon-resize-full button-default"></span>
 	<script type="text/javascript">
 		(function () {		
 			var frame = document.getElementById('frame');
